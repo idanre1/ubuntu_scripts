@@ -5,11 +5,18 @@ cd ~
 sudo apt-get install git source-highlight
 git clone https://github.com/idanre1/settings.git
 git clone https://github.com/idanre1/scripts.git
+git clone https://github.com/idanre1/ubuntu_scripts.git
+
+# aarc64 to x86 patch
 chmod +x ~/scripts/*
+\rm -rf ~/scripts/hub
+ln -s ~/ubuntu_scripts/hub ~/scripts/hub 
+
+sudo apt-get install libcurl4-openssl-dev #Using git_init
 
 sudo ln -s ~ /nas
 echo source ~/settings/bashrc >> ~/.bashrc
-
+echo source ~/ubuntu_scripts/python_init.rc >> ~/.bashrc
 
 # Setting python
 virtualenv -p /usr/bin/python3 --no-site-packages py3env
