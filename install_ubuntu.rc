@@ -18,6 +18,11 @@ sudo ln -s ~ /nas
 echo source ~/settings/bashrc >> ~/.bashrc
 echo source ~/ubuntu_scripts/python_init.rc >> ~/.bashrc
 
+# Ubuntu specific
+sudo apt-get install git rclone
+mkdir ~/onedrive
+
 # Setting python
+sudo apt install python3 python3-pip python3-tk
 virtualenv -p /usr/bin/python3 --no-site-packages py3env
 virtualenv -p /usr/bin/python2 --no-site-packages py2env
