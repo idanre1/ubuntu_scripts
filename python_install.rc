@@ -1,0 +1,21 @@
+#!/bin/bash
+deactivate
+source ~/ubuntu_scripts/python_init.rc
+
+# Python3
+cd $py3bin
+source activate
+pip -V
+pip install zipline
+pip install pipeline-live
+
+deactivate
+
+# Python 2
+cd $py3bin
+source activate
+pip -V
+pip install numpy pandas
+
+echo "Todos:"
+echo "~/ibridgepy"

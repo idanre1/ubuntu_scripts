@@ -1,0 +1,16 @@
+#!/bin/bash
+cd ~
+
+#Making nice linux
+sudo apt-get install git source-highlight
+git clone https://github.com/idanre1/settings.git
+git clone https://github.com/idanre1/scripts.git
+chmod +x ~/scripts/*
+
+sudo ln -s ~ /nas
+echo source ~/settings/bashrc >> ~/.bashrc
+
+
+# Setting python
+virtualenv -p /usr/bin/python3 --no-site-packages py3env
+virtualenv -p /usr/bin/python2 --no-site-packages py2env
