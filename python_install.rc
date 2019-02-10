@@ -19,3 +19,5 @@ pip install numpy pandas
 
 echo "Todos:"
 echo "~/ibridgepy"
+echo "visual studio code"
+echo "TWS"
