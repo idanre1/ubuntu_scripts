@@ -2,6 +2,15 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "/home/idanre1/algo"
+		},
+		{
+			"path": "/home/idanre1/scripts"
+		},
+		{
+			"path": "/home/idanre1/settings"
 		}
 	]
 }
