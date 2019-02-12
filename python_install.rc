@@ -17,7 +17,7 @@ pip install pipeline-live
 deactivate
 
 # Python 2
-cd $py3bin
+cd $py2bin
 source activate
 pip -V
 pip install numpy pandas
