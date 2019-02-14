@@ -14,7 +14,7 @@ source activate
 pip -V
 pip install zipline
 pip install pipeline-live
-pip install pylint
+pip install pylint zmq
 
 deactivate
 
@@ -23,7 +23,7 @@ cd $py2bin
 source activate
 pip -V
 pip install numpy pandas
-pip intstall pylint
+pip intstall pylint zmq
 
 deactivate
 
