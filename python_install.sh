@@ -14,6 +14,7 @@ source activate
 pip -V
 pip install zipline
 pip install pipeline-live
+pip install pylint
 
 deactivate
 
@@ -22,6 +23,7 @@ cd $py2bin
 source activate
 pip -V
 pip install numpy pandas
+pip intstall pylint
 
 deactivate
 
