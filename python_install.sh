@@ -5,7 +5,7 @@ apt-yes install python3 python3-pip python3-tk virtualenv
 virtualenv -p /usr/bin/python3 --no-site-packages py3env
 virtualenv -p /usr/bin/python2 --no-site-packages py2env
 
-source ~/ubuntu_scripts/python_init.rc
+source ~/ubuntu_scripts/python_init.sh
 
 # Python3
 cd $py3bin
