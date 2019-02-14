@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "/home/idanre1/algo/ibridgepy"
+		}
+	],
+	"settings": {
+		"editor.insertSpaces": false,
+		"python.pythonPath": "/home/idan/py2env/bin",
+	}
+}

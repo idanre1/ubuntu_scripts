@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "/home/idanre1/scripts"
+		},
+		{
+			"path": "/home/idanre1/settings"
+		},
+		{
+			"path": "/home/idanre1/algo/iex"
+		},
+		{
+			"path": "/home/idanre1/algo/screen"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.insertSpaces": false,
+		"python.pythonPath": "/home/idan/py3env/bin",
+	}
+}
