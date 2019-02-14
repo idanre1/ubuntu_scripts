@@ -14,8 +14,8 @@ sudo ln -s /home/$USER /home/idan
 
 apt-yes install source-highlight
 echo source ~/settings/bashrc >> ~/.bashrc
-echo source ~/ubuntu_scripts/python_init.rc >> ~/.bashrc
-apt-yes install nmon # htop nmon.sourceforge.net
+echo source ~/ubuntu_scripts/python_init.sh >> ~/.bashrc
+#apt-yes install nmon # htop nmon.sourceforge.net
 
 # aarc64 to x86 patch
 chmod +x ~/scripts/*
@@ -27,7 +27,7 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 #mkdir ~/onedrive
 
 # Setting python
-~/ubuntu_scripts/python_install.rc
+~/ubuntu_scripts/python_install.sh
 pip3 install glances # htop
 
 # TODOS:
