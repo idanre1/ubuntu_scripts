@@ -22,7 +22,7 @@ deactivate
 cd $py2bin
 source activate
 pip -V
-pip install numpy pandas
+pip install numpy pandas pandas_datareader
 pip intstall pylint zmq
 
 deactivate
