@@ -15,7 +15,7 @@ pip -V
 pip install zipline
 pip install pipeline-live
 pip install pylint zmq
-
+pip install apscheduler
 deactivate
 
 # Python 2
