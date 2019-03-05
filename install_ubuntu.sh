@@ -13,7 +13,7 @@ git clone https://github.com/idanre1/ubuntu_scripts.git
 sudo ln -s ~ /nas
 sudo ln -s /home/$USER /home/idan
 
-$aptyes install source-highlight
+$aptyes install source-highlight curl
 echo source ~/settings/bashrc >> ~/.bashrc
 echo source ~/ubuntu_scripts/python_init.sh >> ~/.bashrc
 #$aptyes install nmon # htop nmon.sourceforge.net
