@@ -1,0 +1,11 @@
+#!/bin/bash
+
+iptables -A OUTPUT -m owner --gid-owner no-internet -d 127.0.0.0/8 -j ACCEPT	
+
+#DOMAIN=iextrading.com
+#HEX=$(perl -e 'print map {chr(length($_)).$_} split /\./, "'$DOMAIN'"' | xxd -p)
+#iptables -A OUTPUT -m owner --gid-owner no-internet -m string --hex-string "|$HEX|" --algo bm -j ACCEPT	
+iptables -A OUTPUT -m owner --gid-owner no-internet -p tcp --dport 443 -j ACCEPT	
+#iptables -A OUTPUT -m owner --gid-owner no-internet -d www.ibridgepy.com -j DROP	
+
+iptables -A OUTPUT -m owner --gid-owner no-internet -j DROP

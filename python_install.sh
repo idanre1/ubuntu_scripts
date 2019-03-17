@@ -14,8 +14,8 @@ source activate
 pip -V
 pip install zipline
 pip install pipeline-live
-pip install pylint zmq
-pip install apscheduler
+pip install pylint #zmq
+#pip install apscheduler
 deactivate
 
 # Python 2
@@ -23,7 +23,7 @@ cd $py2bin
 source activate
 pip -V
 pip install numpy pandas pandas_datareader
-pip intstall pylint zmq
+pip intstall pylint #zmq
 
 deactivate
 
