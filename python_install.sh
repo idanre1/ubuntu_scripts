@@ -16,6 +16,7 @@ pip install zipline
 pip install pipeline-live
 pip install pylint #zmq
 #pip install apscheduler
+pip install ib_insync
 deactivate
 
 # Python 2
