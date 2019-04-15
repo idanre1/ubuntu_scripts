@@ -31,6 +31,9 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 ~/ubuntu_scripts/python_install.sh
 pip3 install glances # htop
 
+# https://github.com/dyne/Tomb/blob/master/INSTALL.md
+#$aptyes install zsh gnupg cryptsetup # pinentry-curses
+
 # TODOS:
 echo "For your choice:"
 echo "sudo apt-get install openssh-server"

@@ -31,6 +31,8 @@ $aptyes install jupyter-notebook
 pip3 install numpy==1.11.3 pandas==0.18.1
 pip3 install pyfolio
 
+# IEX
+pip3 install pandas_datareader
 
 # TODOS:
 echo "For your choice:"
