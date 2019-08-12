@@ -1,0 +1,14 @@
+[Unit]
+Description=Scheduler service for finance
+After=network.target multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/nas/algo/startup_init.sh
+
+
+[Install]
+WantedBy=multi-user.target
+
+#[Timer]
+#OnBootSec=10

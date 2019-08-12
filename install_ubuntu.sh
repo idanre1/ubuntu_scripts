@@ -31,6 +31,12 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 ~/ubuntu_scripts/python_install.sh
 pip3 install glances # htop
 
+# systemd 
+sudo cp -t /lib/systemd/system ~/ubuntu_scripts/*.service
+sudo systemctl daemon-reload
+cd /lib/systemd/system
+sudo systemctl enable scheduler_finance.service timewindow_finance.service
+
 # https://github.com/dyne/Tomb/blob/master/INSTALL.md
 #$aptyes install zsh gnupg cryptsetup # pinentry-curses
 
@@ -40,7 +46,7 @@ echo "sudo apt-get install openssh-server"
 
 # Trailer
 echo "Todos:"
-echo "always-on, qutologin"
+echo "always-on, autologin"
 echo "update upgrade dist-upgrade"
 echo "crome remote"
 echo "Dropbox"
