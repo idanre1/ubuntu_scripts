@@ -3,9 +3,10 @@ Description=Scheduler service for finance
 After=network.target multi-user.target
 
 [Service]
+User=idanre1
+WorkingDirectory=/nas/algo
 Type=simple
-ExecStart=/nas/algo/startup_init.sh
-
+ExecStart=/nas/algo/scheduler_finance.pl
 
 [Install]
 WantedBy=multi-user.target

@@ -18,6 +18,8 @@ pip install pipeline-live
 pip install pylint #zmq
 #pip install apscheduler
 pip install ib_insync
+# scrapper
+pip install aiohttp fake_useragent
 deactivate
 
 # Python 2

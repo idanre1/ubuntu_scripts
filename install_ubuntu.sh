@@ -18,6 +18,9 @@ echo source ~/settings/bashrc >> ~/.bashrc
 echo source ~/ubuntu_scripts/python_init.sh >> ~/.bashrc
 #$aptyes install nmon # htop nmon.sourceforge.net
 
+# virtual X server
+$aptyes xserver-xorg-video-dummy
+
 # aarc64 to x86 patch
 chmod +x ~/scripts/*
 \rm -rf ~/scripts/hub
@@ -35,7 +38,7 @@ pip3 install glances # htop
 sudo cp -t /lib/systemd/system ~/ubuntu_scripts/*.service
 sudo systemctl daemon-reload
 cd /lib/systemd/system
-sudo systemctl enable scheduler_finance.service timewindow_finance.service
+sudo systemctl enable scheduler_finance.service timewindow_finance.service startup_finance.service
 
 # https://github.com/dyne/Tomb/blob/master/INSTALL.md
 #$aptyes install zsh gnupg cryptsetup # pinentry-curses
