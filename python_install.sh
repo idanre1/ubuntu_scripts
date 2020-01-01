@@ -20,6 +20,7 @@ pip install apscheduler
 pip install ib_insync
 # scrapper
 pip install aiohttp fake_useragent
+pip install scrapy-mongodb
 deactivate
 
 # Python 2

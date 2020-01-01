@@ -43,6 +43,11 @@ sudo systemctl enable scheduler_finance.service timewindow_finance.service start
 # https://github.com/dyne/Tomb/blob/master/INSTALL.md
 #$aptyes install zsh gnupg cryptsetup # pinentry-curses
 
+# database
+aptyes install mongodb # for scrapy
+#sudo snap install robo3t-snap
+
+
 # TODOS:
 echo "For your choice:"
 echo "sudo apt-get install openssh-server"
