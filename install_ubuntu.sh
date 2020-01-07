@@ -15,6 +15,7 @@ sudo ln -s /home/$USER /home/idan
 
 $aptyes install source-highlight curl
 echo source ~/settings/bashrc >> ~/.bashrc
+echo source ~/settings/vimrc >> ~/.vimrc
 echo source ~/ubuntu_scripts/python_init.sh >> ~/.bashrc
 #$aptyes install nmon # htop nmon.sourceforge.net
 
@@ -47,6 +48,14 @@ sudo systemctl enable scheduler_finance.service timewindow_finance.service start
 aptyes install mongodb # for scrapy
 #sudo snap install robo3t-snap
 
+# talib
+cd ~
+wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+tar xvf ta-lib-0.4.0-src.tar.gz
+cd ta-lib
+./configure --prefix=/usr
+make
+sudo make install
 
 # TODOS:
 echo "For your choice:"
