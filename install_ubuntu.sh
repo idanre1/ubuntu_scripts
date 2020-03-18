@@ -1,5 +1,6 @@
 #!/bin/bash
 # Usage: install git libcurl4-openssl-dev
+#        git clone https://github.com/idanre1/ubuntu_scripts.git
 cd ~
 aptyes='sudo DEBIAN_FRONTEND=noninteractive apt-get -y '
 
@@ -33,7 +34,7 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 
 # Setting python
 ~/ubuntu_scripts/python_install.sh
-pip3 install glances # htop
+# pip3 install glances # htop replica
 
 # systemd 
 sudo cp -t /lib/systemd/system ~/ubuntu_scripts/*.service
@@ -45,7 +46,7 @@ sudo systemctl enable scheduler_finance.service timewindow_finance.service start
 #$aptyes install zsh gnupg cryptsetup # pinentry-curses
 
 # database
-aptyes install mongodb # for scrapy
+# aptyes install mongodb # for scrapy
 #sudo snap install robo3t-snap
 
 # talib
@@ -65,7 +66,7 @@ echo "sudo apt-get install openssh-server"
 echo "Todos:"
 echo "always-on, autologin"
 echo "update upgrade dist-upgrade"
-echo "crome remote"
+# echo "crome remote"
 echo "Dropbox"
 echo "Visual studio code: snap install code --classic"
 echo "TWS"
