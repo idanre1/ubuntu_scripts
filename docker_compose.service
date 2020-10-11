@@ -1,4 +1,4 @@
-# /etc/systemd/system/docker-compose-app.service
+# /lib/systemd/system/docker-compose.service
 
 [Unit]
 Description=Docker Compose Application Service

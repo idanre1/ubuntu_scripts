@@ -36,12 +36,6 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 ~/ubuntu_scripts/python_install_orchestrator.sh
 # pip3 install glances # htop replica
 
-# systemd 
-sudo cp -t /lib/systemd/system ~/ubuntu_scripts/docker_compose.service
-sudo systemctl daemon-reload
-cd /lib/systemd/system
-sudo systemctl enable docker_compose.service
-
 # database
 # aptyes install mongodb # for scrapy
 #sudo snap install robo3t-snap
@@ -59,18 +53,50 @@ sudo systemctl enable docker_compose.service
 # Docker
 # ###################################################################
 # Update the apt package index and install packages to allow apt to use a repository over HTTPS
-$aptyes install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+# $aptyes install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 # Add Docker’s official GPG key
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 # set up the stable repository. To add the nightly or test repository, add the word nightly or test (or both) after the word stable in the commands below
-sudo add-apt-repository \
-  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) \
-  stable"
-$aptyes install docker-ce docker-ce-cli containerd.io
+# sudo add-apt-repository \
+#   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+#   $(lsb_release -cs) \
+#   stable"
+# $aptyes install docker-ce docker-ce-cli containerd.io
 # Docker compose container
-sudo curl -L --fail https://github.com/docker/compose/releases/download/1.27.4/run.sh -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+# sudo curl -L --fail https://github.com/docker/compose/releases/download/1.27.4/run.sh -o /usr/local/bin/docker-compose
+# sudo chmod +x /usr/local/bin/docker-compose
+
+# ###################################################################
+# gitea
+# ###################################################################
+# git
+adduser \
+   --system \
+   --shell /bin/bash \
+   --gecos 'Git Version Control' \
+   --group \
+   --disabled-password \
+   --home /home/git \
+   git
+
+# gitea
+sudo chown -R git:git /home/$USER/gitea
+sudo -u git ln -fs /home/$USER/orchestrator/app.ini /home/$USER/gitea/app.ini 
+# Add repo signing key to apt
+sudo curl -sL -o /etc/apt/trusted.gpg.d/morph027-gitea.asc https://packaging.gitlab.io/gitea/gpg.key
+# Add repo to apt
+echo "deb [arch=amd64] https://packaging.gitlab.io/gitea gitea main" | sudo tee /etc/apt/sources.list.d/morph027-gitea.list
+sudo apt-get update
+sudo apt-get install gitea
+
+
+# systemd 
+sudo systemctl disable gitea.service
+sudo cp -t /lib/systemd/system ~/ubuntu_scripts/gitea.service
+sudo systemctl daemon-reload
+cd /lib/systemd/system
+sudo systemctl enable gitea.service
+sudo systemctl restart gitea.service
 
 
 # ###################################################################
