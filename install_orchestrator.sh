@@ -48,6 +48,20 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 # sudo make install
 
 # ###################################################################
+# Docker
+# ###################################################################
+# Update the apt package index and install packages to allow apt to use a repository over HTTPS
+$aptyes install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+# Add Docker’s official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# set up the stable repository. To add the nightly or test repository, add the word nightly or test (or both) after the word stable in the commands below
+sudo add-apt-repository \
+  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) \
+  stable"
+$aptyes install docker-ce docker-ce-cli containerd.io
+
+# ###################################################################
 # TODOS:
 # ###################################################################
 echo "For your choice:"
