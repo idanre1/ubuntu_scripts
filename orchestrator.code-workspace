@@ -1,16 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "/home/idanre1/scripts"
-		},
-		{
-			"path": "/home/idanre1/settings"
-		},
-		{
 			"path": "."
 		},
 		{
-			"path": "/home/idanre1/scheduler"
+			"path": "/home/idanre1/orchestrator"
 		},
 	],
 	"settings": {

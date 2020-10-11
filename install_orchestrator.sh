@@ -37,7 +37,7 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 # pip3 install glances # htop replica
 
 # systemd 
-sudo cp -t /lib/systemd/system ~/ubuntu_scripts/*.service
+sudo cp -t /lib/systemd/system ~/ubuntu_scripts/docker_compose.service
 sudo systemctl daemon-reload
 cd /lib/systemd/system
 sudo systemctl enable docker_compose.service
