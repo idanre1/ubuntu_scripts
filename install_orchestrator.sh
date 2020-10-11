@@ -15,6 +15,8 @@ git clone https://github.com/idanre1/ubuntu_scripts.git
 #Making nice linux
 sudo ln -s ~ /nas
 sudo ln -s /home/$USER /home/idan
+# set timezone
+sudo timedatectl set-timezone Asia/Jerusalem
 
 $aptyes install source-highlight curl
 echo source ~/settings/bashrc >> ~/.bashrc
@@ -52,6 +54,24 @@ sudo systemctl enable docker_compose.service
 # ./configure --prefix=/usr
 # make
 # sudo make install
+
+# ###################################################################
+# Docker
+# ###################################################################
+# Update the apt package index and install packages to allow apt to use a repository over HTTPS
+$aptyes install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+# Add Docker’s official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# set up the stable repository. To add the nightly or test repository, add the word nightly or test (or both) after the word stable in the commands below
+sudo add-apt-repository \
+  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) \
+  stable"
+$aptyes install docker-ce docker-ce-cli containerd.io
+# Docker compose container
+sudo curl -L --fail https://github.com/docker/compose/releases/download/1.27.4/run.sh -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
 
 # ###################################################################
 # TODOS:

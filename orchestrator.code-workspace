@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "/home/idanre1/scripts"
+		},
+		{
+			"path": "/home/idanre1/settings"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "/home/idanre1/scheduler"
+		},
+	],
+	"settings": {
+		"editor.insertSpaces": false,
+		"python.pythonPath": "/home/idanre1/py3env/bin",
+	}
+}
