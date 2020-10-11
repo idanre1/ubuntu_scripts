@@ -4,6 +4,7 @@
 cd ~
 # Make sure no questions asked :)
 export DEBIAN_FRONTEND=noninteractive
+sudo apt-get update
 
 #Git + fetch workspace from git
 sudo apt-get install git libcurl4-openssl-dev
@@ -46,10 +47,12 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 # make
 # sudo make install
 
+# ###################################################################
 # TODOS:
+# ###################################################################
 echo "For your choice:"
 
-# Trailer
-echo "Todos:"
-echo "sudo apt-get update upgrade dist-upgrade"
+echo "sudo apt-get update"
+echo "sudo apt-get upgrade"
+echo "sudo apt-get dist-upgrade"
 echo "java: apt install ant"
