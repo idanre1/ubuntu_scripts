@@ -34,6 +34,12 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 ~/ubuntu_scripts/python_install_orchestrator.sh
 # pip3 install glances # htop replica
 
+# systemd 
+sudo cp -t /lib/systemd/system ~/ubuntu_scripts/*.service
+sudo systemctl daemon-reload
+cd /lib/systemd/system
+sudo systemctl enable docker_compose.service
+
 # database
 # aptyes install mongodb # for scrapy
 #sudo snap install robo3t-snap
@@ -56,3 +62,4 @@ echo "sudo apt-get update"
 echo "sudo apt-get upgrade"
 echo "sudo apt-get dist-upgrade"
 echo "java: apt install ant"
+echo "curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash"
