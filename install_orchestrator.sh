@@ -31,7 +31,7 @@ chmod +x ~/scripts/*
 ln -s ~/ubuntu_scripts/hub ~/scripts/hub 
 
 # Setting python
-~/ubuntu_scripts/python_install.sh
+~/ubuntu_scripts/python_install_orchestrator.sh
 # pip3 install glances # htop replica
 
 # database
