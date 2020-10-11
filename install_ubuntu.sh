@@ -1,5 +1,6 @@
 #!/bin/bash
-# Usage: install git libcurl4-openssl-dev
+# Usage: 
+#        sudo apt-get install git libcurl4-openssl-dev
 #        git clone https://github.com/idanre1/ubuntu_scripts.git
 cd ~
 aptyes='sudo DEBIAN_FRONTEND=noninteractive apt-get -y '
@@ -13,6 +14,7 @@ git clone https://github.com/idanre1/ubuntu_scripts.git
 #Making nice linux
 sudo ln -s ~ /nas
 sudo ln -s /home/$USER /home/idan
+sudo timedatectl set-timezone Asia/Jerusalem # Set timezone
 
 $aptyes install source-highlight curl
 echo source ~/settings/bashrc >> ~/.bashrc
@@ -21,7 +23,7 @@ echo source ~/ubuntu_scripts/python_init.sh >> ~/.bashrc
 #$aptyes install nmon # htop nmon.sourceforge.net
 
 # virtual X server
-$aptyes xserver-xorg-video-dummy
+$aptyes install xserver-xorg-video-dummy
 
 # aarc64 to x86 patch
 chmod +x ~/scripts/*
@@ -31,6 +33,23 @@ ln -s ~/ubuntu_scripts/hub ~/scripts/hub
 # Ubuntu specific
 #$aptyes install git rclone
 #mkdir ~/onedrive
+
+# talib
+# Should be before python because its dependant
+cd ~
+wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+tar xvf ta-lib-0.4.0-src.tar.gz
+cd ta-lib
+echo "*** Configure TA-LIB"
+./configure --prefix=/usr
+echo "*** Make TA-LIB"
+make
+echo "*** Install TA-LIB"
+sudo make install
+echo "*** Cleaning up"
+cd ..
+\rm -rf ta-lib-0.4.0-src.tar.gz
+\rm -rf ta-lib
 
 # Setting python
 ~/ubuntu_scripts/python_install.sh
@@ -48,15 +67,6 @@ sudo systemctl enable scheduler_finance.service timewindow_finance.service start
 # database
 # aptyes install mongodb # for scrapy
 #sudo snap install robo3t-snap
-
-# talib
-cd ~
-wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
-tar xvf ta-lib-0.4.0-src.tar.gz
-cd ta-lib
-./configure --prefix=/usr
-make
-sudo make install
 
 # TODOS:
 echo "For your choice:"
