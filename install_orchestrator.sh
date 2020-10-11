@@ -2,12 +2,12 @@
 # Usage: install git libcurl4-openssl-dev
 #        git clone https://github.com/idanre1/ubuntu_scripts.git
 cd ~
-# Make sure no questions asked :)
-export DEBIAN_FRONTEND=noninteractive
-sudo apt-get update
+aptyes='sudo DEBIAN_FRONTEND=noninteractive apt-get -y '
+
+$aptyes update
 
 #Git + fetch workspace from git
-sudo apt-get install git libcurl4-openssl-dev
+$aptyes install git libcurl4-openssl-dev
 git clone https://github.com/idanre1/settings.git
 git clone https://github.com/idanre1/scripts.git
 git clone https://github.com/idanre1/ubuntu_scripts.git
@@ -16,14 +16,14 @@ git clone https://github.com/idanre1/ubuntu_scripts.git
 sudo ln -s ~ /nas
 sudo ln -s /home/$USER /home/idan
 
-sudo apt-get install source-highlight curl
+$aptyes install source-highlight curl
 echo source ~/settings/bashrc >> ~/.bashrc
 echo source ~/settings/vimrc >> ~/.vimrc
 echo source ~/ubuntu_scripts/python_init.sh >> ~/.bashrc
-#sudo apt-get install nmon # htop nmon.sourceforge.net
+#$aptyes install nmon # htop nmon.sourceforge.net
 
 # virtual X server
-# sudo apt-get xserver-xorg-video-dummy
+# $aptyes xserver-xorg-video-dummy
 
 # aarc64 to x86 patch
 chmod +x ~/scripts/*
