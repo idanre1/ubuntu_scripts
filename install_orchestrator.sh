@@ -15,6 +15,8 @@ git clone https://github.com/idanre1/ubuntu_scripts.git
 #Making nice linux
 sudo ln -s ~ /nas
 sudo ln -s /home/$USER /home/idan
+# set timezone
+sudo timedatectl set-timezone Asia/Jerusalem
 
 $aptyes install source-highlight curl
 echo source ~/settings/bashrc >> ~/.bashrc
