@@ -18,4 +18,6 @@ pip -V
 # scrapper
 # pip install aiohttp fake_useragent
 # pip install scrapy-mongodb
+pip install lxml fake-useragent
+
 deactivate

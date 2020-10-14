@@ -21,6 +21,5 @@
 	],
 	"settings": {
 		"editor.insertSpaces": false,
-		"python.pythonPath": "/home/idan/py3env/bin",
 	}
 }

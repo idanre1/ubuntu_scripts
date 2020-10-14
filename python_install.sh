@@ -22,6 +22,7 @@ pip install apscheduler
 pip install ib_insync
 pip install TA-Lib #This is a Python wrapper for TA-LIB based on Cython instead of SWIG (https://github.com/mrjbq7/ta-lib)
 pip install matplotlib mplfinance
+pip install python-dateutil # parse iso format dates before python 3.7
 
 # scrapper
 # pip install aiohttp fake_useragent
