@@ -15,6 +15,7 @@ git clone https://github.com/idanre1/ubuntu_scripts.git
 #Making nice linux
 sudo ln -s ~ /nas
 sudo ln -s /home/$USER /home/idan
+ln -fs /home/$USER/orchestrator /home/$USER/algo
 # set timezone
 sudo timedatectl set-timezone Asia/Jerusalem
 
@@ -92,11 +93,11 @@ sudo apt-get install gitea
 
 # systemd 
 sudo systemctl disable gitea.service
-sudo cp -t /lib/systemd/system ~/ubuntu_scripts/gitea.service
+sudo cp -t /lib/systemd/system ~/ubuntu_scripts/*.service
 sudo systemctl daemon-reload
 cd /lib/systemd/system
 sudo systemctl enable gitea.service
-sudo systemctl restart gitea.service
+sudo systemctl restart scheduler_finance.service
 
 
 # ###################################################################
