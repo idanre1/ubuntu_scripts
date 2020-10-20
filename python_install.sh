@@ -17,7 +17,7 @@ source activate
 pip -V
 pip install zipline
 pip install pipeline-live
-#pip install pylint #zmq
+pip install zmq #pylint
 pip install apscheduler
 pip install ib_insync
 pip install TA-Lib #This is a Python wrapper for TA-LIB based on Cython instead of SWIG (https://github.com/mrjbq7/ta-lib)
