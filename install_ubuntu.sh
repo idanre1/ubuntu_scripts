@@ -1,34 +1,14 @@
 #!/bin/bash
 # Usage: 
 #        sudo apt-get install git libcurl4-openssl-dev
-#        git clone https://github.com/idanre1/ubuntu_scripts.git
+#        wget https://raw.githubusercontent.com/idanre1/ubuntu_scripts/master/install_ubuntu.sh
 cd ~
 aptyes='sudo DEBIAN_FRONTEND=noninteractive apt-get -y '
 
-#Git + fetch workspace from git
-$aptyes install git libcurl4-openssl-dev
-git clone https://github.com/idanre1/settings.git
-git clone https://github.com/idanre1/scripts.git
 git clone https://github.com/idanre1/ubuntu_scripts.git
-
-#Making nice linux
-sudo ln -s ~ /nas
-sudo ln -s /home/$USER /home/idan
-sudo timedatectl set-timezone Asia/Jerusalem # Set timezone
-
-$aptyes install source-highlight curl
-echo source ~/settings/bashrc >> ~/.bashrc
-echo source ~/settings/vimrc >> ~/.vimrc
-echo source ~/ubuntu_scripts/python_init.sh >> ~/.bashrc
-#$aptyes install nmon # htop nmon.sourceforge.net
 
 # virtual X server
 $aptyes install xserver-xorg-video-dummy
-
-# aarc64 to x86 patch
-chmod +x ~/scripts/*
-\rm -rf ~/scripts/hub
-ln -s ~/ubuntu_scripts/hub ~/scripts/hub 
 
 # Ubuntu specific
 #$aptyes install git rclone
