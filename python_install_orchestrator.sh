@@ -24,4 +24,6 @@ pip install numpy pandas
 pip install apscheduler SQLAlchemy dateutil
 pip install lxml fake-useragent
 
+pip install finam-export
+
 deactivate
