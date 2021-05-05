@@ -1,4 +1,13 @@
 #!/bin/bash
+# https://docs.microsoft.com/en-us/troubleshoot/azure/virtual-machines/oom-swap-file-linux-vm
+# df -h /mnt
+# xx is amount of GB*1024
+# How to setup swap:
+# ResourceDisk.Format=y
+# ResourceDisk.EnableSwap=y
+# ResourceDisk.SwapSizeMB=xx
+
+
 SWAP_ON=`sudo swapon --show`
 
 if [$SWAP_ON -eq '']; then
