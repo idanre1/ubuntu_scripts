@@ -35,7 +35,7 @@ cd ..
 ~/ubuntu_scripts/python_install.sh
 # pip3 install glances # htop replica
 
-# systemd 
+# systemd TODO: commit from private rep now
 sudo cp -t /lib/systemd/system ~/ubuntu_scripts/*.service
 sudo systemctl daemon-reload
 cd /lib/systemd/system
