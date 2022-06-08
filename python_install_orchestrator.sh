@@ -5,7 +5,7 @@ aptyes='sudo DEBIAN_FRONTEND=noninteractive apt-get -y '
 $aptyes install python3 python3-pip python3-tk virtualenv
 virtualenv -p /usr/bin/python3.8 --no-site-packages ~/Envs/py3env
 
-source ~/ubuntu_scripts/python_init.sh
+source ~/settings/python_init.sh
 
 # -----------------------------------------
 # Python3
