@@ -22,7 +22,7 @@ pip -V
 # pip install scrapy-mongodb
 pip install PyYAML
 pip install numpy pandas pandas-market-calendars
-pip install apscheduler SQLAlchemy dateutil
+pip install apscheduler SQLAlchemy
 pip install lxml fake-useragent openpyxl
 
 pip install azure-cli dvc[azure] pyAesCrypt
