@@ -15,7 +15,7 @@ source activate
 pip -V
 # pip install python-dateutil # parse iso format dates before python 3.7
 
-pip install zmq #pylint
+# pip install zmq #pylint
 
 # scrapper
 # pip install aiohttp fake_useragent
@@ -23,12 +23,11 @@ pip install zmq #pylint
 pip install PyYAML
 pip install numpy pandas pandas-market-calendars
 pip install apscheduler SQLAlchemy dateutil
-pip install lxml fake-useragent
+pip install lxml fake-useragent openpyxl
 
-pip install dvc[azure] pyAesCrypt
+pip install azure-cli dvc[azure] pyAesCrypt
 
-pip install finam-export
-pip install alpaca_trade_api
-pip install mplfinance
+pip install finam-export alpaca_trade_api pretty_html_table
+pip install mplfinance #sklearn
 
 deactivate
